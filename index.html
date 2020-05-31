@@ -1,0 +1,226 @@
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+<html>
+<main>
+
+  <!--Links to Libraries-->
+  <head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,800&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>Survey Form Project</title>
+
+    <!--Start of Page-->
+  <body>
+    <div id="content-container">
+      <header>
+        <!--Logo Title-->
+        <div id="img-container">
+          <img id="jojo-img" src="https://upload.wikimedia.org/wikipedia/en/d/d9/Jojo%27s_Bizzare_Adventure_logo.png" style="text-align: center;" alt="JJBA Logo Title" style=" width: 100%;">
+        </div>
+
+        <!--White Square Shape-->
+        <div id="white-square">
+        </div>
+        <div>
+          <h1 id="title"><em>SURVEY FORM</em></h1>
+        </div>
+      </header>
+      <!--Form Overlay-->
+      <div id="content-container">
+      <div id="formOverlay" style="text-align: center;">
+        <p id="description" style="font-size: 20px; padding: 0px 0px 0px 0px; "><b>For those who have seen the show or read the manga!</b></p>
+        <!--Beginning of Form-->
+        <form id="survey-form">
+
+          <!--User Info Section-->
+          <fieldset>
+            <legend style="font-size: 20px; text-align: left;"><b>User Info</b></legend>
+            <section id="user-info">
+              <!--Name Input-->
+              <div class="label-container" style="margin-left: 245px;">
+                <label for="name" id="name-label">Name</label>
+              </div>
+              <input id="name" placeholder="ex: 'bucciarati'" class="input-style" required>
+              <!--Email Input-->
+              <div class="label-container" style="margin-left: 245px; padding-top: 20px;">
+                <label for="email" id="email-label">Email</label>
+              </div>
+              <input id="email" type="email" pattern="+@globex.com" placeholder="ex: 'speedwagon@jjbemail.com'" class="input-style" required>
+              <!--Age Input-->
+              <div class="label-container" style="margin-left: 245px; padding-top: 20px;">
+                <label for="number" id="number-label">Age<em class="style-em">(optional)</em></label>
+              </div>
+              <input id="number" type="number" min="10" max="150" placeholder="ex: '16'" class="input-style">
+            </section>
+          </fieldset>
+<!--Details Section-->
+          <!--Fav Jojo Section-->
+          <fieldset>
+            <legend style="font-size: 20px; text-align: left;"><b>Details</b></legend>
+            <section id="choose-jojo">
+              <div class="label-container" style="padding-bottom: 10px;">
+                <label for="choose-jojo" id="dropdown-label">Who is your Favorite Jojo?</label>
+              </div>
+              <!--Fav Jojo Dropdown-->
+              <div style="padding-bottom: 20px;">
+              <select id="dropdown" name="fav-jojo" class="input-style">
+                <option id="select-option" value="0">Select an Option</option>
+                <option id="jonathan" value="1">Jonathan</option>
+                <option id="joseph" value="2">Joseph</option>
+                <option id="jotaro" value="3">Jotaro</option>
+                <option id="josuke-diu" value="4">Josuke (DiU)</option>
+                <option id="giornno" value="5">Giornno</option>
+                <option id="jolyne" value="6">Jolyne</option>
+                <option id="johnny" value="7">Johnny</option>
+                <option id="josuke-lion" value="8">Josuke (Lion)</option>
+              </select>
+              </div>
+            </section>
+
+            <!--Friend Recommendation Section-->
+            <section id="jjba-friend-rec">
+              <div class="label-container">
+                <label for="jjba-friend-rec" id="radio-label">Would you recommend JJBA to a friend?</label>
+              </div>
+              <!--Maybe-->
+              <div class="choice-container">
+                <input id="maybe" type="radio" name="rec" value="0">
+                <label for="maybe" style="font-size: 20px;">Yare Yare Daze</label>
+              </div>
+              <!--Yes-->
+              <div class="choice-container">
+                <input id="yes" type="radio" name="rec" value="1">
+                <label for="yes" style="font-size: 20px;">Wrrryyyy!</label>
+              </div>
+              <!--No-->
+              <div class="choice-container">
+                <input id="no" type="radio" name="rec" value="2">
+                <label for="no" style="font-size: 20px;">NO! NO! NO!</label>
+              </div>
+            </section>
+
+            <!--Favorite Thing Section-->
+            <section id="fav-thing">
+              <div class="label-container" style="padding-bottom: 10px; padding-top: 10px;">
+                <label for="fav-thing">What is your Favorite Thing about JJBA?</label>
+              </div>
+              <!--Fav Thing Dropdown-->
+              <div style="padding-bottom: 20px;">
+              <select id="choose-thing" name="thing-pick" class="input-style">
+                <option value="0">Select an Option</option>
+                <option value="1">Art Style</option>
+                <option value="2">Characters</option>
+                <option value="3">Hamon</option>
+                <option value="4">Humor</option>
+                <option value="5">Music</option>
+                <option value="6">Stands</option>
+                <option value="7">Story</option>
+                <option value="8">Voice-Acting</option>
+              </select>
+              </div>
+            </section>
+
+            <!--Part Recommendation Section-->
+            <section id="part-rec">
+              <div class="label-container">
+                <label for="part-rec">What parts of the series would you recommend?<em class="style-em">(Check all that apply)</em></label>
+              </div>
+              <!--Phantom Blood-->
+              <div class="choice-container" style="padding-top: 5px;">
+                <input id="phantom-blood" type="checkbox" name="part" value="0">
+                <label for="phantom-blood" style="font-size: 20px;">Phantom Blood</label>
+              </div>
+              <!--Battle Tendency-->
+              <div class="choice-container">
+                <input id="battle-tendency" type="checkbox" name="part" value="1">
+                <label for="battle-tendency" style="font-size: 20px;">Battle Tendency</label>
+              </div>
+              <!--Stardust Crusaders-->
+              <div class="choice-container">
+                <input id="stardust-crusaders" type="checkbox" name="part" value="2">
+                <label for="stardust-crusaders" style="font-size: 20px;">Stardust Crusaders</label>
+              </div>
+              <!--Diamond is Unbreakable-->
+              <div class="choice-container">
+                <input id="diamond-is-unbreakable" type="checkbox" name="part" value="3">
+                <label for="diamond-is-unbreakable" type="checkbox" name="part" value="4" style="font-size: 20px;">Diamond is Unbreakable</label>
+              </div>
+              <!--Golden Wind-->
+              <div class="choice-container">
+                <input id="golden-wind" type="checkbox" name="part" value="4">
+                <label for="golden-wind" style="font-size: 20px;">Golden Wind</label>
+              </div>
+              <!--Stone Ocean-->
+              <div class="choice-container">
+                <input id="stone-ocean" type="checkbox" name="part" value="5">
+                <label for="stone-ocean" style="font-size: 20px;">Stone Ocean</label>
+              </div>
+              <!--Steel Ball Run-->
+              <div class="choice-container">
+                <input id="steel-ball-run" type="checkbox" name="part" value="6">
+                <label for="steel-ball-run" style="font-size: 20px;">Steel Ball Run</label>
+              </div>
+              <!--Jojolion-->
+              <div class="choice-container">
+                <input id="jojolion" type="checkbox" name="part" value="6">
+                <label for="jojolion" style="font-size: 20px;">Jojolion</label>
+              </div>
+            </section>
+          </fieldset>
+
+          <!--Comment Section-->
+          <fieldset>
+            <legend style="font-size: 20px; text-align: left;"><b>Comments and Suggestions</b></legend>
+            <section id="comment-section">
+              <div class="label-container" style="padding-bottom: 10px;">
+                <label for="comment-section">If you were a Jojo character, what would be your stand's name and ability?</label>
+              </div>
+              <!--Text Boxes-->
+              <!--Comments-->
+              <div class="textarea-style">
+                <textarea id="comms" placeholder="Enter your stand's description here..." rows="10" style="width: 60%;" maxlength="500"></textarea>
+              </div>
+              <!--Suggestions-->
+              <div id="suggs-container">
+                <div class="label-container" style="padding-bottom: 10px; padding-top: 20px;">
+                  <label for="suggs">What would you like to see happen next with the series?</label>
+                </div>
+                <textarea id="suggs" placeholder="Enter your suggestions here..." rows="10" style="width: 60%;" maxlength="500"></textarea>
+              </div>
+            </section>
+          </fieldset>
+
+          <!--Submit Button Section-->
+          <section id="submit-section">
+            <div style="padding: 10px 0px 10px 0px;">
+              <input id="submit" type="submit" href="#" class="submit-style">
+            </div>
+          </section>
+          <!--End of Form-->
+        </form>
+
+      </div>
+      </div>
+    <!--Footer Section-->
+      <div class="footer-container">
+        <footer class="f-style" style="text-align: center; padding: 2px 0px 2px 0px;">
+          <p>Project created by BGath</p>
+          <!--Icon Links-->
+          <div id="icons">
+          <a href="https://www.freecodecamp.org/bgath" target="_blank"><i class="fab fa-free-code-camp fa-2x"></i></a>
+            <a href="https://github.com/BGath" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+            <a href="https://codepen.io/bgath" target="_blank"><i class="fab fa-codepen fa-2x"></i></a>
+            </div>
+          <!--Disclaimer-->
+          <p><b>Disclaimer:</b> I do not own JJBA or the art displayed on this project. All rights go to their respective owners.</p>
+        </footer>
+      </div>
+    </div>
+    </div>
+    <!--End of Page (whats shown)-->
+  </body>
+  </head>
+</main>
+
+</html>
